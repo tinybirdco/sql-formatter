@@ -17,8 +17,8 @@ jobs:
           npm install
           npm run build
           mkdir build
-          mv dist build/dist/
-          mv index.html build
+          cp -R dist build/dist/
+          cp index.html build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
