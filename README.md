@@ -1,8 +1,8 @@
-# SQL Formatter [![NPM version](https://img.shields.io/npm/v/sql-formatter.svg)](https://npmjs.com/package/sql-formatter) [![Build Status](https://travis-ci.org/zeroturnaround/sql-formatter.svg?branch=master)](https://travis-ci.org/zeroturnaround/sql-formatter) [![Coverage Status](https://coveralls.io/repos/github/zeroturnaround/sql-formatter/badge.svg?branch=master)](https://coveralls.io/github/zeroturnaround/sql-formatter?branch=master)
+# Tinybird SQL Formatter (fork from [SQL-Formatter](https://github.com/zeroturnaround/sql-formatter))
 
 **SQL Formatter** is a JavaScript library for pretty-printing SQL queries.
 It started as a port of a [PHP Library][], but has since considerably diverged.
-Now only provides Tinybird for better compression
+Now only provides Tinybird for better compression.
 
 SQL formatter supports the following dialects:
 
@@ -23,7 +23,7 @@ It does not support:
 - Stored procedures.
 - Changing of the delimiter type to something else than `;`.
 
-&rarr; [Try the demo.](https://zeroturnaround.github.io/sql-formatter/)
+&rarr; [Try the demo.](https://tinybirdco.github.io/sql-formatter/)
 
 ## Install
 
