@@ -54,7 +54,6 @@ You can also pass in configuration options:
 
 ```js
 sqlFormatter.format('SELECT * FROM tbl', {
-  language: 'tinybird', // Defaults to "tinybird" (see the above list of supported dialects)
   indent: '    ', // Defaults to two spaces
   uppercase: bool, // Defaults to false
   linesBetweenQueries: 2, // Defaults to 1

@@ -7,7 +7,7 @@
 // import RedshiftFormatter from './languages/RedshiftFormatter';
 // import SparkSqlFormatter from './languages/SparkSqlFormatter';
 // import TSqlFormatter from './languages/TSqlFormatter';
-import StandardSqlFormatter from './languages/StandardSqlFormatter';
+// import StandardSqlFormatter from './languages/StandardSqlFormatter';
 import TinybirdFormatter from './languages/TinybirdFormatter';
 
 const formatters = {
@@ -41,14 +41,7 @@ export const format = (query, cfg = {}) => {
     throw new Error('Invalid query argument. Extected string, instead got ' + typeof query);
   }
 
-  let Formatter = StandardSqlFormatter;
-  if (cfg.language !== undefined) {
-    Formatter = formatters[cfg.language];
-  }
-  if (Formatter === undefined) {
-    throw Error(`Unsupported SQL dialect: ${cfg.language}`);
-  }
-  return new Formatter(cfg).format(query);
+  return new TinybirdFormatter(cfg).format(query);
 };
 
 export const supportedDialects = Object.keys(formatters);
