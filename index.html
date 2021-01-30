@@ -100,8 +100,8 @@
       <div class="select-wrapper">
         <label for="lanugage">Format</label>
         <select id="language">
-          <option value="sql">SQL</option>
-          <!-- dialects -->
+          <option value="tinybird">Tinybird</option>
+          <!-- <option value="sql">SQL</option>
           <option value="redshift">AWS Redshift</option>
           <option value="db2">DB2</option>
           <option value="mariadb">MariaDB</option>
@@ -110,21 +110,18 @@
           <option value="plsql">PL/SQL</option>
           <option value="postgresql">PostgreSQL</option>
           <option value="spark">Spark</option>
-          <option value="tsql">Transact-SQL</option>
+          <option value="tsql">Transact-SQL</option> -->
         </select>
         |
         <label for="uppercase">Uppercase</label>
-        <input type="checkbox" id="uppercase" name="uppercase" checked />
+        <input type="checkbox" id="uppercase" name="uppercase" />
       </div>
     </header>
     <main>
       <section class="input">
         <textarea id="input" autofocus="true" wrap="off">
-select supplier_name,city from
-(select * from suppliers join addresses on suppliers.address_id=addresses.id)
-as suppliers
-where supplier_id>500
-order by supplier_name asc,city desc;
+          SELECT toDate(timestamp) date, user_id, groupArray(attr2) referers, groupArray(location) urls FROM only_pageloads
+          group by date, user_id
       </textarea
         >
       </section>

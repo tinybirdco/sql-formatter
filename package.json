@@ -20,7 +20,9 @@
     "postgresql",
     "pl/sql",
     "transact-sql",
-    "db2"
+    "db2",
+    "clickhouse",
+    "Tinybird"
   ],
   "contributors": [
     "Adrien Pyke <adpyke@gmail.com>",
@@ -67,6 +69,7 @@
     "build:commonjs": "babel src --out-dir lib",
     "build:umd": "webpack --config webpack.dev.js",
     "build:umd:min": "webpack --config webpack.prod.js",
+    "build:watch": "webpack --watch --config webpack.dev.js",
     "prepare": "npm run clean && npm run check && npm run build"
   },
   "repository": {
@@ -106,6 +109,7 @@
     "collectCoverage": true
   },
   "dependencies": {
-    "argparse": "^2.0.1"
+    "argparse": "^2.0.1",
+    "editor-languages": "git+https://hello-read:gY7TyM-6DLaAzoqzxj88@gitlab.com/tinybird/editor-languages#v0.0.4"
   }
 }
