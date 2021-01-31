@@ -1,22 +1,6 @@
-# Tinybird SQL Formatter (fork from [SQL-Formatter](https://github.com/zeroturnaround/sql-formatter))
+# Tinybird SQL Formatter
 
-**SQL Formatter** is a JavaScript library for pretty-printing SQL queries.
-It started as a port of a [PHP Library][], but has since considerably diverged.
-Now only provides Tinybird for better compression.
-
-SQL formatter supports the following dialects:
-
-- ~~**sql** - [Standard SQL][]~~
-- ~~**mariadb** - [MariaDB][]~~
-- ~~**mysql** - [MySQL][]~~
-- ~~**postgresql** - [PostgreSQL][]~~
-- ~~**db2** - [IBM DB2][]~~
-- ~~**plsql** - [Oracle PL/SQL][]~~
-- ~~**n1ql** - [Couchbase N1QL][]~~
-- ~~**redshift** - [Amazon Redshift][]~~
-- ~~**spark** - [Spark][]~~
-- ~~**tsql** - [SQL Server Transact-SQL][tsql]~~
-- **Tinybird** - [Clickhouse + Tinybird SQL]()
+JavaScript library for pretty-printing Tinybird SQL queries.
 
 It does not support:
 
