@@ -95,9 +95,6 @@
           <option value="spark">Spark</option>
           <option value="tsql">Transact-SQL</option> -->
         </select>
-        |
-        <label for="uppercase">Uppercase</label>
-        <input type="checkbox" id="uppercase" name="uppercase" />
       </div>
     </header>
     <main>
@@ -117,7 +114,6 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         let language = document.getElementById('language');
-        let uppercase = document.getElementById('uppercase');
         let input = document.getElementById('input');
         let output = document.getElementById('output');
 
@@ -125,14 +121,12 @@
           console.time('formatting');
           output.value = sqlFormatter.format(input.value, {
             language: language.options[language.selectedIndex].value,
-            uppercase: uppercase.checked,
           });
           console.timeEnd('formatting');
         }
 
         input.addEventListener('input', format);
         language.addEventListener('change', format);
-        uppercase.addEventListener('change', format);
 
         format();
       });
