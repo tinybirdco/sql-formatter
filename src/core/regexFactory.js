@@ -18,8 +18,12 @@ export function createReservedWordRegex(reservedWords) {
   if (reservedWords.length === 0) {
     return new RegExp(`^\b$`, 'u');
   }
-  const reservedWordsPattern = sortByLengthDesc(reservedWords).join('|').replace(/ /gu, '\\s+');
-  return new RegExp(`^(${reservedWordsPattern})\\b`, 'iu');
+  const reservedWordsPattern = sortByLengthDesc(reservedWords)
+    .join('|')
+    .replace(/ /gu, '\\s+')
+    .replace('{%', '\\{%')
+    .replace('%}', '%\\}');
+  return new RegExp(`^(${reservedWordsPattern})`, 'iu');
 }
 
 export function createWordRegex(specialChars = []) {

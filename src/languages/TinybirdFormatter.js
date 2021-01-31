@@ -12,6 +12,7 @@ const reservedTopLevelWords = [
   'CASE',
   'END',
   'EXCEPT',
+  '{% end %}',
   'FROM',
   'ORDER BY',
   'HAVING',
@@ -27,6 +28,7 @@ const reservedTopLevelWordsNoIndent = ['UNION', 'UNION ALL'];
 
 const reservedNewlineWords = [
   'AND',
+  '{%',
   'ELSE',
   'OR',
   'WHEN',
