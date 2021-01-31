@@ -120,7 +120,7 @@
         function format() {
           console.time('formatting');
           output.value = sqlFormatter.format(input.value, {
-            language: language.options[language.selectedIndex].value
+            language: language.options[language.selectedIndex].value,
           });
           console.timeEnd('formatting');
         }
